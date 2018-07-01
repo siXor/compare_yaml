@@ -11,7 +11,9 @@ def traverse_compare_vals(val1, val2, parent):
         difs = traverse_compare_lists(val1, val2, parent)
     else:
         if val1 != val2:
-            difs.append(parent + "=" + str(val2))
+            val1_full = parent + "=" + str(val1)
+            val2_full = parent + "=" + str(val2)
+            difs.append((val1, val2))
     return difs
 
 
